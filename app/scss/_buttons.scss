@@ -1,0 +1,40 @@
+.btnV1 {
+    @include btnStyle;
+    padding: 15px 56px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.top-btn {
+    width: 50px;
+    display: block;
+    z-index: 555;
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    transition: all ease 0.5s;
+    transform: translateY(100px);
+
+    img {
+        width: 100%;
+        display: block;
+    }
+}
+
+.__body_up {
+    transform: translateY(0px);
+}
+
+@media only screen and (max-width: 750px) {
+    .btnV1 {
+        padding: 11px 30px;
+        font-size: 14px;
+    }
+
+    .top-btn {
+        width: 40px;
+        right: 10px;
+        bottom: 70px;
+
+    }
+}
