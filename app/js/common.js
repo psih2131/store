@@ -192,6 +192,149 @@ $(function () {
     });
 
 
+    //product-slider
+    $('.last-view-sec__slider').slick({
+        infinite: true,
+        speed: 1000,
+        adaptiveHeight: true,
+        slidesToScroll: 1,
+        dots: false,
+        slidesToShow: 3,
+        prevArrow: '<div class="ar_slier prev-ar_slide"></div></div>',
+        nextArrow: '<div class="ar_slier next-ar_slide"></div></div>',
+        responsive: [
+            {
+                breakpoint: 1000,
+                settings: {
+                    slidesToShow: 2,
+                }
+            },
+            {
+                breakpoint: 750,
+                settings: {
+                    slidesToShow: 1,
+                }
+            },
+
+
+        ]
+    });
+
+
+    //slider card
+    $('.card-big-slider').slick({
+        infinite: true,
+        speed: 1000,
+        adaptiveHeight: true,
+        slidesToScroll: 1,
+        dots: false,
+        slidesToShow: 1,
+        arrows: false,
+        asNavFor: '.card-nav-slider , .big-slider-popup , .smal-slider-popup',
+        responsive: [
+            {
+                breakpoint: 1000,
+                settings: {
+                    slidesToShow: 1,
+                }
+            },
+            {
+                breakpoint: 750,
+                settings: {
+                    slidesToShow: 1,
+                    arrows: true,
+                    prevArrow: '<div class="ar_slier prev-ar_slide"></div></div>',
+                    nextArrow: '<div class="ar_slier next-ar_slide"></div></div>',
+                }
+            },
+
+
+        ]
+    });
+    $('.card-nav-slider').slick({
+        infinite: true,
+        speed: 1000,
+        adaptiveHeight: true,
+        slidesToScroll: 1,
+        focusOnSelect: true,
+        dots: false,
+        slidesToShow: 4,
+        prevArrow: '<div class="ar_slier prev-ar_slide"></div></div>',
+        nextArrow: '<div class="ar_slier next-ar_slide"></div></div>',
+        asNavFor: '.card-big-slider , .big-slider-popup , .smal-slider-popup',
+        responsive: [
+            {
+                breakpoint: 1000,
+                settings: {
+                    slidesToShow: 4,
+                }
+            },
+            {
+                breakpoint: 750,
+                settings: {
+                    slidesToShow: 2,
+                }
+            },
+
+        ]
+    });
+    $('.big-slider-popup').slick({
+        infinite: true,
+        speed: 1000,
+        adaptiveHeight: true,
+        slidesToScroll: 1,
+        dots: false,
+        slidesToShow: 1,
+        prevArrow: '<div class="ar_slier-popup prev-ar_slide"></div></div>',
+        nextArrow: '<div class="ar_slier-popup next-ar_slide"></div></div>',
+        asNavFor: '.card-big-slider , .card-nav-slider , .smal-slider-popup',
+        responsive: [
+            {
+                breakpoint: 1000,
+                settings: {
+                    slidesToShow: 1,
+                }
+            },
+            {
+                breakpoint: 750,
+                settings: {
+                    slidesToShow: 1,
+                }
+            },
+
+
+        ]
+    });
+
+    $('.smal-slider-popup').slick({
+        infinite: true,
+        speed: 1000,
+        adaptiveHeight: true,
+        slidesToScroll: 1,
+        focusOnSelect: true,
+        dots: false,
+        arrows: false,
+        slidesToShow: 4,
+        asNavFor: '.card-big-slider , .big-slider-popup , .card-nav-slider',
+        responsive: [
+            {
+                breakpoint: 1000,
+                settings: {
+                    slidesToShow: 4,
+                }
+            },
+            {
+                breakpoint: 750,
+                settings: {
+                    slidesToShow: 2,
+                }
+            },
+
+        ]
+    });
+
+
+
     //lang open close
     $('.lang-switch__btn').on('click', function () {
         $('.lang-switch__list').slideToggle(300, function () {
@@ -319,97 +462,6 @@ window.addEventListener('load', function () {
     openCloseSearch()
 
 
-    //animations start
-    function animateController() {
-        new Skroll({
-            mobile: true,
-        })
-            .add(".front-sec__slider", {
-                delay: 300,
-                duration: 1000,
-                animation: "fadeInUp"
-            })
-            .add(".front-sec__info", {
-                delay: 300,
-                duration: 1000,
-                animation: "fadeInUp"
-            })
-            .add(".network-row-main__link", {
-                delay: 100,
-                duration: 500,
-                animation: "fadeInUp"
-            })
-            .add(".sec-title", {
-                delay: 200,
-                duration: 1000,
-                animation: "fadeInUp"
-            })
-            .add(".sale-slider__element-wrapper", {
-                delay: 200,
-                duration: 1000,
-                animation: "fadeInUp"
-            })
-            .add(".tw-element", {
-                delay: 200,
-                duration: 1000,
-                animation: "fadeInUp"
-            })
-            .add(".category-sec__btn-wrapper", {
-                delay: 200,
-                duration: 1000,
-                animation: "fadeInUp"
-            })
-            .add(".video-rev-sec__element", {
-                delay: 200,
-                duration: 1000,
-                animation: "fadeInUp"
-            })
-            .add(".about-sec__text", {
-                delay: 200,
-                duration: 1000,
-                animation: "fadeInUp"
-            })
-            .add(".about-sec__image", {
-                delay: 400,
-                duration: 1000,
-                animation: "fadeInUp"
-            })
-            .add(".formula-element", {
-                delay: 200,
-                duration: 1000,
-                animation: "fadeInUp"
-            })
-            .add(".formula-sec__btn-wrapper", {
-                delay: 200,
-                duration: 1000,
-                animation: "fadeInUp"
-            })
-            .add(".text-reviews-sec__element", {
-                delay: 200,
-                duration: 1000,
-                animation: "fadeInUp"
-            })
-            .add(".advantages-sec__check", {
-                delay: 200,
-                duration: 1000,
-                animation: "fadeInUp"
-            })
-            .add(".advantages-sec__advantages", {
-                delay: 400,
-                duration: 1000,
-                animation: "fadeInUp"
-            })
-
-
-            .init()
-            .recalcPosition()
-    }
-
-    animateController()
-
-    //animation end
-
-
     // animation scroll link
     const anchors = document.querySelectorAll('a[href*="#"]')
     for (let anchor of anchors) {
@@ -531,6 +583,335 @@ window.addEventListener('load', function () {
     subMenyOpen();
 
 
+    //activ fixed product btn
+    function activFixBtn() {
+        let allFixedBtn = document.querySelectorAll('.prod-fixed-btn');
+        for (let i = 0; i < allFixedBtn.length; i++) {
+            allFixedBtn[i].addEventListener('click', () => {
+                allFixedBtn[i].classList.toggle('prod-fixed-btn_active')
+            })
+        }
+    }
+    activFixBtn();
+
+    //card tab switch
+    function tabSwitch() {
+        const mediaQuery = window.matchMedia('(min-width: 750px)')
+        if (mediaQuery.matches) {
+            let tabNavElements = document.querySelectorAll('.card-nav ul li')
+            let tabConteinerElements = document.querySelectorAll('.tab-claster__element')
+            if (tabNavElements.length > 0) {
+                for (let i = 0; i < tabNavElements.length; i++) {
+                    tabNavElements[i].addEventListener('click', function () {
+                        for (let x = 0; x < tabNavElements.length; x++) {
+                            tabNavElements[x].classList.remove('card-nav_active')
+                        }
+                        for (let y = 0; y < tabConteinerElements.length; y++) {
+                            tabConteinerElements[y].classList.remove('tab-claster__element_active')
+                        }
+                        tabNavElements[i].classList.add('card-nav_active')
+                        tabConteinerElements[i].classList.add('tab-claster__element_active')
+                    })
+                }
+            }
+        }
+        else {
+            let allTabElements = document.querySelectorAll('.tab-claster__element');
+            if (allTabElements.length > 0) {
+                for (let i = 0; i < allTabElements.length; i++) {
+                    let headerTab = allTabElements[i].querySelector('.sec-title_no-anim')
+                    let bodyTab = allTabElements[i].querySelector('.tab-claster__element-conteiner')
+                    headerTab.addEventListener('click', function () {
+                        allTabElements[i].classList.toggle('bodyTab_mob-active')
+                    })
+                }
+            }
+        }
+
+    }
+    tabSwitch()
+
+    //reviews rate star 
+    function rateStar() {
+        let allRevStar = document.querySelectorAll('.rate-inp-conteiner__row .rate-inp-conteiner__star')
+        let rateInput = document.querySelector('.rate-inp-conteiner-value')
+        if (allRevStar.length > 0) {
+            for (let i = 0; i < allRevStar.length; i++) {
+                allRevStar[i].addEventListener('click', function () {
+                    let nevStopValue = i;
+                    for (let x = 0; x < allRevStar.length; x++) {
+                        allRevStar[x].classList.remove('rate-inp-conteiner__star_active')
+                    }
+                    for (let x = 0; x <= nevStopValue; x++) {
+                        allRevStar[x].classList.add('rate-inp-conteiner__star_active')
+                    }
+                    rateInput.setAttribute('value', i + 1)
+                })
+            }
+        }
+    }
+    rateStar();
+
+
+    //one click load product price info
+    function loadOneClickBuy() {
+        let btnOneClick = document.querySelector('.one-click-btn')
+
+        if (btnOneClick != null) {
+            let productPrice = document.querySelector('.price-conteiner__current-price span').innerHTML
+            let productImage = document.querySelector('.card-big-slider__element_main-image img').getAttribute('src')
+
+            let popupPrice = document.querySelector('.product-info-popup__price-value')
+            let popupImage = document.querySelector('.product-info-popup__image img')
+            popupPrice.innerHTML = productPrice
+            popupImage.setAttribute('src', productImage)
+        }
+
+    }
+    loadOneClickBuy()
+
+
+    //card
+    function cardHeaderValueElement() {
+        let allCartElements = document.querySelectorAll('.cart-element')
+        let headerCounterBox = document.querySelector('.card__num');
+        if (allCartElements.length > 0) {
+            headerCounterBox.innerHTML = allCartElements.length
+            renderLocalPriseCart();
+            renderTotalPriceCart()
+        }
+        else {
+            headerCounterBox.innerHTML = 0;
+            renderTotalPriceCart()
+        }
+    }
+    cardHeaderValueElement();
+
+    function cartInputCounter() {
+        let cartAllElements = document.querySelectorAll('.cart-element')
+
+        for (let i = 0; i < cartAllElements.length; i++) {
+            let maxBtn = cartAllElements[i].querySelector('.cart-element__max')
+            let minBtn = cartAllElements[i].querySelector('.cart-element__min')
+            let input = cartAllElements[i].querySelector('.cart-element__input-counter')
+            let totatElementPrice = cartAllElements[i].querySelector('.cart-element__price span')
+
+            maxBtn.addEventListener('click', function () {
+                maxValue(input, totatElementPrice)
+            })
+            minBtn.addEventListener('click', function () {
+                minValue(input, totatElementPrice)
+            })
+        }
+    }
+    cartInputCounter()
+
+    function maxValue(input) {
+        if (+input.value == 99) {
+            input.value == 99
+        }
+        else {
+            input.value = +input.value + 1
+        }
+        renderLocalPriseCart()
+        renderTotalPriceCart()
+    }
+
+    function minValue(input) {
+        if (+input.value == 1) {
+            input.value == 1
+        }
+        else {
+            input.value = +input.value - 1
+        }
+        renderLocalPriseCart()
+        renderTotalPriceCart()
+    }
+
+    function renderLocalPriseCart() {
+        let cartAllElements = document.querySelectorAll('.cart-element')
+        if (cartAllElements.length > 0) {
+            for (let i = 0; i < cartAllElements.length; i++) {
+                let valueInp = cartAllElements[i].querySelector('.cart-element__input-counter').value;
+                let price = cartAllElements[i].querySelector('.cart-element__price span');
+                let singlElementPrice = price.getAttribute('data-singl-price');
+                let currentPrice = +singlElementPrice * valueInp;
+                price.innerHTML = currentPrice;
+                price.setAttribute('data-totat-price', currentPrice);
+            }
+        }
+    }
+
+    function renderTotalPriceCart() {
+        let cartAllElements = document.querySelectorAll('.cart-element')
+        let totalPrice = document.querySelector('.total-price-cart')
+        let currentValue = 0
+        if (cartAllElements.length > 0) {
+            for (let i = 0; i < cartAllElements.length; i++) {
+                let productAllPrice = cartAllElements[i].querySelector('.cart-element__price span').getAttribute('data-totat-price');
+                currentValue = +productAllPrice + +currentValue
+            }
+            totalPrice.innerHTML = currentValue
+            totalPrice.setAttribute('data-totat-price', currentValue)
+        }
+        else {
+            totalPrice.innerHTML = currentValue
+            totalPrice.setAttribute('data-totat-price', currentValue)
+        }
+    }
+
+    function delCartElement() {
+        let cartAllElements = document.querySelectorAll('.cart-element')
+        if (cartAllElements.length > 0) {
+            for (let i = 0; i < cartAllElements.length; i++) {
+                let delBtn = cartAllElements[i].querySelector('.cart-element__close')
+                delBtn.addEventListener('click', function () {
+                    cartAllElements[i].remove()
+                    cardHeaderValueElement();
+                })
+            }
+        }
+    }
+    delCartElement()
+
+
+
+
+
+    //animations start
+    function animateController() {
+        new Skroll({
+            mobile: true,
+        })
+            .add(".front-sec__slider", {
+                delay: 300,
+                duration: 1000,
+                animation: "fadeInUp"
+            })
+            .add(".front-sec__info", {
+                delay: 300,
+                duration: 1000,
+                animation: "fadeInUp"
+            })
+            .add(".network-row-main__link", {
+                delay: 100,
+                duration: 500,
+                animation: "fadeInUp"
+            })
+            .add(".sec-title", {
+                delay: 200,
+                duration: 1000,
+                animation: "fadeInUp"
+            })
+            .add(".sale-slider__element-wrapper", {
+                delay: 200,
+                duration: 1000,
+                animation: "fadeInUp"
+            })
+            .add(".tw-element", {
+                delay: 200,
+                duration: 1000,
+                animation: "fadeInUp"
+            })
+            .add(".category-sec__btn-wrapper", {
+                delay: 200,
+                duration: 1000,
+                animation: "fadeInUp"
+            })
+            .add(".video-rev-sec__element", {
+                delay: 200,
+                duration: 1000,
+                animation: "fadeInUp"
+            })
+            .add(".about-sec__text", {
+                delay: 200,
+                duration: 1000,
+                animation: "fadeInUp"
+            })
+            .add(".about-sec__image", {
+                delay: 400,
+                duration: 1000,
+                animation: "fadeInUp"
+            })
+            .add(".formula-element", {
+                delay: 200,
+                duration: 1000,
+                animation: "fadeInUp"
+            })
+            .add(".formula-sec__btn-wrapper", {
+                delay: 200,
+                duration: 1000,
+                animation: "fadeInUp"
+            })
+            .add(".text-reviews-sec__element", {
+                delay: 200,
+                duration: 1000,
+                animation: "fadeInUp"
+            })
+            .add(".advantages-sec__check", {
+                delay: 200,
+                duration: 1000,
+                animation: "fadeInUp"
+            })
+            .add(".advantages-sec__advantages", {
+                delay: 400,
+                duration: 1000,
+                animation: "fadeInUp"
+            })
+            .add(".catalog-front-sec__title", {
+                delay: 100,
+                duration: 1000,
+                animation: "fadeInUp"
+            })
+            .add(".catalog-conteiner__title", {
+                delay: 100,
+                duration: 1000,
+                animation: "fadeInUp"
+            })
+            .add(".catalog-conteiner__nav-row", {
+                delay: 100,
+                duration: 1000,
+                animation: "fadeInUp"
+            })
+            .add(".product-element", {
+                delay: 150,
+                duration: 1000,
+                animation: "fadeInUp"
+            })
+            .add(".pagination", {
+                delay: 100,
+                duration: 1000,
+                animation: "fadeInUp"
+            })
+            .add(".subscribtion-sec__form", {
+                delay: 100,
+                duration: 1000,
+                animation: "fadeInUp"
+            })
+            .add(".card-info-sec__slider", {
+                delay: 100,
+                duration: 1000,
+                animation: "fadeInUp"
+            })
+            .add(".card-info-sec__info", {
+                delay: 300,
+                duration: 1000,
+                animation: "fadeInUp"
+            })
+            .add(".product-dop-info-sec", {
+                delay: 300,
+                duration: 1000,
+                animation: "fadeInUp"
+            })
+
+
+            .init()
+            .recalcPosition()
+    }
+
+    animateController()
+
+    //animation end
 
 }, false);
 

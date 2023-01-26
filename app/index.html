@@ -202,7 +202,7 @@
 								</form>
 							</div>
 						</div>
-						<div class="shop-controls__element card">
+						<div class="shop-controls__element card air-open-btn" data-popup-current="shipping-cart">
 							<img src="img/_src/card-ic.svg" alt="">
 							<div class="card__num">12</div>
 						</div>
@@ -633,8 +633,8 @@
 			</div>
 		</header>
 
-		<main>
-			<section class="front-sec" id="top">
+		<main id="top">
+			<section class="front-sec">
 				<div class="content">
 					<div class="front-sec__slider">
 						<div class="front-sec__slide front-slideV1">
@@ -1936,11 +1936,362 @@
 			</div>
 		</div>
 
+		<div class="popup-air add-questions" data-air="questions-form">
+			<div class="autorization-popup__form">
+				<h3 class="autorization-popup__title">Задать вопрос</h3>
+				<form class="autorization-popup__form-inp">
+					<div class="autorization-popup__inp-box email-inp">
+						<p class="autorization-popup__inp-title">Ваше имя</p>
+						<div class="autorization-popup__inp-wrapper">
+							<div class="autorization-popup__inp-ic">
+								<img src="img/_src/user-form.svg" alt="">
+							</div>
+							<input type="text" placeholder="Введите свое имя">
+						</div>
+					</div>
+					<div class="autorization-popup__inp-box email-inp">
+						<p class="autorization-popup__inp-title">E-mail</p>
+						<div class="autorization-popup__inp-wrapper">
+							<div class="autorization-popup__inp-ic">
+								<img src="img/_src/email.svg" alt="">
+							</div>
+							<input type="text" placeholder="Введите свой E-mail">
+						</div>
+					</div>
+					<div class="autorization-popup__inp-box email-inp">
+						<p class="autorization-popup__inp-title">Вопрос</p>
+						<div class="autorization-popup__inp-wrapper">
+							<div class="autorization-popup__inp-ic">
+								<img src="img/_src/mes-form.svg" alt="">
+							</div>
+							<input type="text" placeholder="Текст вашего вопроса">
+						</div>
+					</div>
+					<div class="autorization-popup__btn-wrapper">
+						<input type="submit" value="Отправить" class="btnSend">
+					</div>
+				</form>
+				<p class="autorization-popup__politic-text">Нажимая кнопку Отправить Вы даете согласие на
+					обработку
+					своих <a href="">персональных данных</a></p>
+			</div>
+		</div>
+
+		<div class="popup-air add-review" data-air="review-form">
+			<div class="autorization-popup__form">
+				<h3 class="autorization-popup__title">Оставить отзыв</h3>
+				<form class="autorization-popup__form-inp">
+					<div class="autorization-popup__inp-box email-inp">
+						<p class="autorization-popup__inp-title">Ваше имя</p>
+						<div class="autorization-popup__inp-wrapper">
+							<div class="autorization-popup__inp-ic">
+								<img src="img/_src/user-form.svg" alt="">
+							</div>
+							<input type="text" placeholder="Введите свое имя">
+						</div>
+					</div>
+					<div class="autorization-popup__reviews-rate rate-inp-conteiner">
+						<p>Рейтинг *</p>
+						<div class="rate-inp-conteiner__row">
+							<div class="rate-inp-conteiner__star"></div>
+							<div class="rate-inp-conteiner__star"></div>
+							<div class="rate-inp-conteiner__star"></div>
+							<div class="rate-inp-conteiner__star"></div>
+							<div class="rate-inp-conteiner__star"></div>
+						</div>
+
+						<!-- скритый инпут в который передается оценка от 1 до 5, по дефолту инпут пустой -->
+						<input type="hidden" class="rate-inp-conteiner-value">
+					</div>
+					<div class="autorization-popup__inp-box email-inp">
+						<p class="autorization-popup__inp-title">E-mail</p>
+						<div class="autorization-popup__inp-wrapper">
+							<div class="autorization-popup__inp-ic">
+								<img src="img/_src/email.svg" alt="">
+							</div>
+							<input type="text" placeholder="Введите свой E-mail">
+						</div>
+					</div>
+					<div class="autorization-popup__inp-box email-inp">
+						<p class="autorization-popup__inp-title">Отзыв</p>
+						<div class="autorization-popup__inp-wrapper">
+							<div class="autorization-popup__inp-ic">
+								<img src="img/_src/mes-form.svg" alt="">
+							</div>
+							<input type="text" placeholder="Текст вашего отзыва">
+						</div>
+					</div>
+					<div class="autorization-popup__btn-wrapper">
+						<input type="submit" value="Отправить" class="btnSend">
+					</div>
+				</form>
+				<p class="autorization-popup__politic-text">Нажимая кнопку Отправить Вы даете согласие на
+					обработку
+					своих <a href="">персональных данных</a></p>
+			</div>
+		</div>
+
+		<div class="popup-air one-click-buy" data-air="one-click-buy">
+			<div class="one-click-buy__wrapper">
+				<div class="autorization-popup__form">
+					<form class="autorization-popup__form-inp">
+						<div class="autorization-popup__inp-box email-inp">
+							<p class="autorization-popup__inp-title">Ваше имя</p>
+							<div class="autorization-popup__inp-wrapper">
+								<div class="autorization-popup__inp-ic">
+									<img src="img/_src/user-form.svg" alt="">
+								</div>
+								<input type="text" placeholder="Введите свое имя">
+							</div>
+						</div>
+						<div class="autorization-popup__inp-box email-inp">
+							<p class="autorization-popup__inp-title">Введите свой телефон</p>
+							<div class="autorization-popup__inp-wrapper">
+								<div class="autorization-popup__inp-ic">
+									<img src="img/_src/phone-form.svg" alt="">
+								</div>
+								<input type="text" placeholder="Введите свой телефон">
+							</div>
+						</div>
+						<div class="autorization-popup__inp-box email-inp">
+							<p class="autorization-popup__inp-title">Текст сообщения</p>
+							<div class="autorization-popup__inp-wrapper">
+								<div class="autorization-popup__inp-ic">
+									<img src="img/_src/mes-form.svg" alt="">
+								</div>
+								<input type="text" placeholder="Текст вашего обращения">
+							</div>
+						</div>
+						<div class="autorization-popup__btn-wrapper">
+							<input type="submit" value="Купить в один клик" class="btnSend">
+						</div>
+					</form>
+					<p class="autorization-popup__politic-text">Нажимая кнопку Отправить Вы даете согласие на
+						обработку
+						своих <a href="">персональных данных</a></p>
+				</div>
+				<div class="one-click-buy__product-info product-info-popup">
+					<div class="product-info-popup__image">
+						<img src="img/_src/tw3.png" alt="">
+					</div>
+					<p class="product-info-popup__price-row">Итог к оплате: <span
+							class="product-info-popup__price-value">13 400</span> ₽</p>
+					<div class="product-info-popup__delivery-row">
+						<p>Доставка от 400 р.</p>
+						<a href="">Правила доставки </a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="popup-air pay-frame" data-air="pay-frame">
+			<div class="pay-frame__wrapper">
+				<!-- фото заглушку можно удалить и вставить сюда фрейм оплаты -->
+				<img class="pay-frame__img" src="img/_src/form-image.png" alt="">
+			</div>
+		</div>
+
+		<div class="popup-air one-click-buy shipping-cart" data-air="shipping-cart">
+			<div class="one-click-buy__wrapper">
+				<div class="autorization-popup__form">
+					<form class="autorization-popup__form-inp">
+						<div class="autorization-popup__inp-box email-inp">
+							<p class="autorization-popup__inp-title">Ваше имя</p>
+							<div class="autorization-popup__inp-wrapper">
+								<div class="autorization-popup__inp-ic">
+									<img src="img/_src/user-form.svg" alt="">
+								</div>
+								<input type="text" placeholder="Введите свое имя">
+							</div>
+						</div>
+						<div class="autorization-popup__inp-box email-inp">
+							<p class="autorization-popup__inp-title">Введите свой телефон</p>
+							<div class="autorization-popup__inp-wrapper">
+								<div class="autorization-popup__inp-ic">
+									<img src="img/_src/phone-form.svg" alt="">
+								</div>
+								<input type="text" placeholder="Введите свой телефон">
+							</div>
+						</div>
+						<div class="autorization-popup__inp-box email-inp">
+							<p class="autorization-popup__inp-title">Текст сообщения</p>
+							<div class="autorization-popup__inp-wrapper">
+								<div class="autorization-popup__inp-ic">
+									<img src="img/_src/mes-form.svg" alt="">
+								</div>
+								<input type="text" placeholder="Текст вашего обращения">
+							</div>
+						</div>
+						<div class="autorization-popup__btn-wrapper">
+							<input type="submit" value="Купить в один клик" class="btnSend">
+						</div>
+					</form>
+					<p class="autorization-popup__politic-text">Нажимая кнопку Отправить Вы даете согласие на
+						обработку
+						своих <a href="">персональных данных</a></p>
+				</div>
+				<div class="one-click-buy__product-info product-info-popup">
+					<div class="shipping-cart__all-products ">
+						<div class="shipping-cart__row cart-element">
+							<div class="cart-element__image">
+								<img src="img/_src/tw1.png" alt="">
+							</div>
+							<p class="cart-element__title">
+								<a href="">DAUKEN FW2640</a>
+							</p>
+							<div class="cart-element__counter-wrapper">
+								<div class="cart-element__max cart-element__count-btn">
+									<svg width="24" height="26" viewBox="0 0 24 26" fill="none"
+										xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M12 23.821C17.5 23.821 22 19.0997 22 13.3292C22 7.55871 17.5 2.8374 12 2.8374C6.5 2.8374 2 7.55871 2 13.3292C2 19.0997 6.5 23.821 12 23.821Z"
+											stroke="#97A3B7" stroke-width="1.5" stroke-linecap="round"
+											stroke-linejoin="round" />
+										<path d="M8 13.3296H16" stroke="#97A3B7" stroke-width="1.5"
+											stroke-linecap="round" stroke-linejoin="round" />
+										<path d="M12 17.5263V9.13281" stroke="#97A3B7" stroke-width="1.5"
+											stroke-linecap="round" stroke-linejoin="round" />
+									</svg>
+								</div>
+								<input type="text" class="cart-element__input-counter" value="3" readonly>
+								<div class="cart-element__min cart-element__count-btn">
+									<svg width="24" height="26" viewBox="0 0 24 26" fill="none"
+										xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M11.9199 23.821C17.4199 23.821 21.9199 19.0997 21.9199 13.3292C21.9199 7.55871 17.4199 2.8374 11.9199 2.8374C6.41992 2.8374 1.91992 7.55871 1.91992 13.3292C1.91992 19.0997 6.41992 23.821 11.9199 23.821Z"
+											stroke="#97A3B7" stroke-width="1.5" stroke-linecap="round"
+											stroke-linejoin="round" />
+										<path d="M7.91992 13.3296H15.9199" stroke="#97A3B7" stroke-width="1.5"
+											stroke-linecap="round" stroke-linejoin="round" />
+									</svg>
+								</div>
+							</div>
+							<p class="cart-element__price">
+								<!-- тут в ssдата атрубит data-singl-price нужно вогнать цену за один товар, все остальное скрипт просчитает сам  -->
+								<span data-singl-price="12000" data-totat-price="">12000</span> ₽
+							</p>
+							<div class="cart-element__close">
+								<img src="img/_src/close.svg" alt="">
+							</div>
+						</div>
+
+						<div class="shipping-cart__row cart-element">
+							<div class="cart-element__image">
+								<img src="img/_src/tw1.png" alt="">
+							</div>
+							<p class="cart-element__title">
+								<a href="">DAUKEN FW2640</a>
+							</p>
+							<div class="cart-element__counter-wrapper">
+								<div class="cart-element__max cart-element__count-btn">
+									<svg width="24" height="26" viewBox="0 0 24 26" fill="none"
+										xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M12 23.821C17.5 23.821 22 19.0997 22 13.3292C22 7.55871 17.5 2.8374 12 2.8374C6.5 2.8374 2 7.55871 2 13.3292C2 19.0997 6.5 23.821 12 23.821Z"
+											stroke="#97A3B7" stroke-width="1.5" stroke-linecap="round"
+											stroke-linejoin="round" />
+										<path d="M8 13.3296H16" stroke="#97A3B7" stroke-width="1.5"
+											stroke-linecap="round" stroke-linejoin="round" />
+										<path d="M12 17.5263V9.13281" stroke="#97A3B7" stroke-width="1.5"
+											stroke-linecap="round" stroke-linejoin="round" />
+									</svg>
+								</div>
+								<input type="text" class="cart-element__input-counter" value="3" readonly>
+								<div class="cart-element__min cart-element__count-btn">
+									<svg width="24" height="26" viewBox="0 0 24 26" fill="none"
+										xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M11.9199 23.821C17.4199 23.821 21.9199 19.0997 21.9199 13.3292C21.9199 7.55871 17.4199 2.8374 11.9199 2.8374C6.41992 2.8374 1.91992 7.55871 1.91992 13.3292C1.91992 19.0997 6.41992 23.821 11.9199 23.821Z"
+											stroke="#97A3B7" stroke-width="1.5" stroke-linecap="round"
+											stroke-linejoin="round" />
+										<path d="M7.91992 13.3296H15.9199" stroke="#97A3B7" stroke-width="1.5"
+											stroke-linecap="round" stroke-linejoin="round" />
+									</svg>
+								</div>
+							</div>
+							<p class="cart-element__price">
+								<!-- тут в ssдата атрубит data-singl-price нужно вогнать цену за один товар, все остальное скрипт просчитает сам  -->
+								<span data-singl-price="12000" data-totat-price="">12000</span> ₽
+							</p>
+							<div class="cart-element__close">
+								<img src="img/_src/close.svg" alt="">
+							</div>
+						</div>
+					</div>
+					<p class="product-info-popup__price-row">Итог к оплате: <span
+							class="shipping-cart__all-price total-price-cart" data-total-price-all="">0</span> ₽</p>
+					<div class="product-info-popup__delivery-row">
+						<p>Доставка от 400 р.</p>
+						<a href="">Правила доставки </a>
+					</div>
+				</div>
+			</div>
+		</div>
+
 		<div class="popup-air video-popup" data-air="video-popup">
 			<iframe width="auto" height="auto" src="" title="YouTube video player" frameborder="0"
 				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
 				allowfullscreen>
 			</iframe>
+		</div>
+
+		<div class="popup-air slider-product" data-air="slider-product">
+			<div class="slider-product__wrapper">
+				<div class="slider-product__big-slider big-slider-popup">
+					<div class="big-slider-popup__element">
+						<div class="big-slider-popup__element-wrapper">
+							<img src="img/_src/tw1.png" alt="">
+						</div>
+					</div>
+					<div class="big-slider-popup__element">
+						<div class="big-slider-popup__element-wrapper">
+							<img src="img/_src/tw2.png" alt="">
+						</div>
+					</div>
+					<div class="big-slider-popup__element">
+						<div class="big-slider-popup__element-wrapper">
+							<img src="img/_src/tw3.png" alt="">
+						</div>
+					</div>
+					<div class="big-slider-popup__element">
+						<div class="big-slider-popup__element-wrapper">
+							<img src="img/_src/tw4.png" alt="">
+						</div>
+					</div>
+					<div class="big-slider-popup__element">
+						<div class="big-slider-popup__element-wrapper">
+							<img src="img/_src/tw5.png" alt="">
+						</div>
+					</div>
+				</div>
+				<div class="slider-product__smal-slider smal-slider-popup">
+					<div class="smal-slider-popup__element">
+						<div class="smal-slider-popup__element-wrapper">
+							<img src="img/_src/tw1.png" alt="">
+						</div>
+					</div>
+					<div class="smal-slider-popup__element">
+						<div class="smal-slider-popup__element-wrapper">
+							<img src="img/_src/tw2.png" alt="">
+						</div>
+					</div>
+					<div class="smal-slider-popup__element">
+						<div class="smal-slider-popup__element-wrapper">
+							<img src="img/_src/tw3.png" alt="">
+						</div>
+					</div>
+					<div class="smal-slider-popup__element">
+						<div class="smal-slider-popup__element-wrapper">
+							<img src="img/_src/tw4.png" alt="">
+						</div>
+					</div>
+					<div class="smal-slider-popup__element">
+						<div class="smal-slider-popup__element-wrapper">
+							<img src="img/_src/tw5.png" alt="">
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 	<script src="js/scripts.min.js"></script>

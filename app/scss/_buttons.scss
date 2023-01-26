@@ -5,6 +5,19 @@
     cursor: pointer;
 }
 
+.btnV2 {
+    @include btnStyleV2;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.btnV3 {
+    @include btnStyleV3;
+    display: inline-block;
+    cursor: pointer;
+    padding: 8px 30px;
+}
+
 .top-btn {
     width: 50px;
     display: block;
@@ -25,6 +38,24 @@
     transform: translateY(0px);
 }
 
+.btnInputSubsc {
+    border: 1px solid $bgColor;
+    border-radius: 5px;
+    padding: 10px 20px;
+    color: $bgColor;
+    background: none;
+    font-size: 16px;
+    font-weight: 300;
+    cursor: pointer;
+    transition: all ease 0.3s;
+
+    &:hover {
+        background: $bgColor;
+        color: $textColor;
+        transition: all ease 0.3s;
+    }
+}
+
 @media only screen and (max-width: 750px) {
     .btnV1 {
         padding: 11px 30px;
@@ -37,4 +68,10 @@
         bottom: 70px;
 
     }
+
+    .btnV2 {
+        padding: 11px 30px;
+        font-size: 14px;
+    }
+
 }
