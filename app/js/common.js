@@ -400,10 +400,19 @@ window.addEventListener('load', function () {
                 openAirConteiner();
                 currentAirPopup.classList.add('air-popup_active');
 
+                window.addEventListener('click', e => { // при клике в любом месте окна браузера
+                    const target = e.target // находим элемент, на котором был клик
+                    if (!target.closest('.popup-air') && !target.closest('.air-open-btn')) { // если этот элемент или его родительские элементы не окно навигации и не кнопка
+                        currentAirPopup.classList.remove('air-popup_active');
+                        closeAirConteiner()
+                    }
+                })
+
                 closeAirIcon.addEventListener('click', function () {
                     currentAirPopup.classList.remove('air-popup_active');
                     closeAirConteiner()
                 })
+
             }
 
             function openAirConteiner() {
@@ -439,6 +448,12 @@ window.addEventListener('load', function () {
                         document.querySelector('.video-popup iframe').setAttribute('src', '')
                     }, 800)
                 });
+                window.addEventListener('click', e => { // при клике в любом месте окна браузера
+                    const target = e.target // находим элемент, на котором был клик
+                    if (!target.closest('.popup-air') && !target.closest('.air-open-btn')) { // если этот элемент или его родительские элементы не окно навигации и не кнопка
+                        document.querySelector('.video-popup iframe').setAttribute('src', '')
+                    }
+                })
             })
         }
     }
