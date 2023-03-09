@@ -347,6 +347,30 @@ $(function () {
         })
     })
 
+    //comment open/close
+    $('.post-body-sec__comment-row').on('click', function () {
+        $('.post-body-sec__comment-wrapper').slideToggle(600, function () {
+            if ($(this).is(':visible')) {
+                $('.post-body-sec__comment-icon').addClass('actlang-comment')
+            }
+            else {
+                $('.post-body-sec__comment-icon').removeClass('actlang-comment')
+            }
+        })
+    })
+
+    //comparsion table open/close
+    $('.table-container__header').on('click', function () {
+        $(this).closest('.table-container__element-tab').find('.table-container__body').slideToggle(600, function () {
+            if ($(this).is(':visible')) {
+                $(this).closest('.table-container__element-tab').find('.table-container__ar').addClass('ar-table-active')
+            }
+            else {
+                $(this).closest('.table-container__element-tab').find('.table-container__ar').removeClass('ar-table-active')
+            }
+        })
+    })
+
 });
 
 
@@ -491,6 +515,24 @@ window.addEventListener('load', function () {
             })
         })
     }
+
+    //selector btn
+    function selectorBtn() {
+        let btn = document.querySelectorAll('.comparison-page-sec__selector-btn')
+        if (btn.length > 0) {
+            for (let i = 0; i < btn.length; i++) {
+                btn[i].addEventListener('click', function () {
+                    if (btn[i].classList.contains("comparison-page-sec__selector-btn_active")) {
+                        btn[i].classList.remove('comparison-page-sec__selector-btn_active')
+                    }
+                    else {
+                        btn[i].classList.add('comparison-page-sec__selector-btn_active')
+                    }
+                })
+            }
+        }
+    }
+    selectorBtn()
 
     //search location
     function search() {
@@ -914,6 +956,56 @@ window.addEventListener('load', function () {
                 animation: "fadeInUp"
             })
             .add(".product-dop-info-sec", {
+                delay: 300,
+                duration: 1000,
+                animation: "fadeInUp"
+            })
+            .add(".main-news", {
+                delay: 300,
+                duration: 1000,
+                animation: "fadeInUp"
+            })
+            .add(".news-page-sec__btn-row", {
+                delay: 300,
+                duration: 1000,
+                animation: "fadeInUp"
+            })
+            .add(".post-body-sec__image", {
+                delay: 300,
+                duration: 1000,
+                animation: "fadeInUp"
+            })
+            .add(".post-body-sec__text ", {
+                delay: 300,
+                duration: 1000,
+                animation: "fadeInUp"
+            })
+            .add(".about-page-sec__big_image ", {
+                delay: 300,
+                duration: 1000,
+                animation: "fadeInUp"
+            })
+            .add(".about-page-sec__sm-img ", {
+                delay: 300,
+                duration: 1000,
+                animation: "fadeInUp"
+            })
+            .add(".about-page-sec__text-row", {
+                delay: 300,
+                duration: 1000,
+                animation: "fadeInUp"
+            })
+            .add(".about-page-sec__lorg-img", {
+                delay: 300,
+                duration: 1000,
+                animation: "fadeInUp"
+            })
+            .add(".form-container", {
+                delay: 300,
+                duration: 1000,
+                animation: "fadeInUp"
+            })
+            .add(".comparison-page-sec__table-container", {
                 delay: 300,
                 duration: 1000,
                 animation: "fadeInUp"

@@ -48,10 +48,30 @@
     font-weight: 300;
     cursor: pointer;
     transition: all ease 0.3s;
+    display: inline-block;
 
     &:hover {
         background: $bgColor;
         color: $textColor;
+        transition: all ease 0.3s;
+    }
+}
+
+.btn-submit-form {
+    padding: 8px 24px;
+    background: $brendColor;
+    opacity: 0.8;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    line-height: 19px;
+    color: $textColor;
+    transition: all ease 0.3s;
+    cursor: pointer;
+
+    &:hover {
+        background: $textColor;
+        color: $brendColor;
         transition: all ease 0.3s;
     }
 }
