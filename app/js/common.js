@@ -887,6 +887,48 @@ window.addEventListener('load', function () {
 
 
 
+    //delivery tab city
+    function cityTab() {
+        let allMainClasters = document.querySelectorAll('.body-element-delivery__v1');
+        if (allMainClasters.length > 0) {
+            for (let i = 0; i < allMainClasters.length; i++) {
+                let navBtn = allMainClasters[i].querySelectorAll('.body-element-delivery__header li')
+                let bodyElement = allMainClasters[i].querySelectorAll('.body-element-delivery__body-element')
+                for (let x = 0; x < navBtn.length; x++) {
+                    navBtn[x].addEventListener('click', function () {
+                        for (let y = 0; y < navBtn.length; y++) {
+                            navBtn[y].classList.remove('body-element-delivery__v1_active')
+                            bodyElement[y].classList.remove('body-element-delivery__body-element_active')
+                        }
+                        navBtn[x].classList.add('body-element-delivery__v1_active')
+                        bodyElement[x].classList.add('body-element-delivery__body-element_active')
+                    })
+                }
+            }
+        }
+    }
+    cityTab()
+
+    //delivery tab region
+    function tabRegion() {
+        let navElements = document.querySelectorAll('.delivery-location-sec__tab-element')
+        let bodyElements = document.querySelectorAll('.body-element-delivery')
+        if (navElements.length > 0) {
+            for (let i = 0; i < navElements.length; i++) {
+                navElements[i].addEventListener('click', function () {
+                    for (let y = 0; y < navElements.length; y++) {
+                        navElements[y].classList.remove('delivery-location-sec__tab-element-active')
+                        bodyElements[y].classList.remove('body-element-delivery_active')
+                    }
+                    navElements[i].classList.add('delivery-location-sec__tab-element-active')
+                    bodyElements[i].classList.add('body-element-delivery_active')
+                })
+            }
+        }
+    }
+    tabRegion()
+
+
 
 
     //animations start
@@ -1070,6 +1112,31 @@ window.addEventListener('load', function () {
                 animation: "fadeInUp"
             })
             .add(".cart-page-sec__contact-form", {
+                delay: 300,
+                duration: 1000,
+                animation: "fadeInUp"
+            })
+            .add(".delivery-location-sec__tab-element", {
+                delay: 300,
+                duration: 1000,
+                animation: "fadeInUp"
+            })
+            .add(".delivery-location-sec__body", {
+                delay: 300,
+                duration: 1000,
+                animation: "fadeInUp"
+            })
+            .add(".delivery-baner-sec", {
+                delay: 300,
+                duration: 1000,
+                animation: "fadeInUp"
+            })
+            .add(".delivery-faq-sec", {
+                delay: 300,
+                duration: 1000,
+                animation: "fadeInUp"
+            })
+            .add(".delivery-rules-sec", {
                 delay: 300,
                 duration: 1000,
                 animation: "fadeInUp"
