@@ -931,6 +931,416 @@ window.addEventListener('load', function () {
 
 
 
+    //search map
+    function searchMap() {
+        let input = document.getElementById("searchMapCity");
+        let filter = input.value.toUpperCase();
+        let ul = document.getElementById("mapCity");
+        let li = ul.getElementsByTagName("div");
+
+        // Перебирайте все элементы списка и скрывайте те, которые не соответствуют поисковому запросу
+        for (let i = 0; i < li.length; i++) {
+            let h5 = li[i];
+            if (h5.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                li[i].style.display = "";
+            } else {
+                li[i].style.display = "none";
+            }
+        }
+    }
+    function startSearchMap() {
+        let currentInput = document.querySelector('#searchMapCity')
+        if (currentInput != null) {
+            currentInput.addEventListener('keyup', searchMap);
+        }
+        else {
+            return;
+        }
+    }
+    startSearchMap()
+
+
+
+    //select city map
+    function selectCityMap() {
+        let inputCity = document.getElementById("searchMapCity");
+        let inputIcon = document.querySelector('.search-map__search-ic')
+        let allCityList = document.querySelectorAll('.search-map__city')
+        let bodyCityContainer = document.querySelector('.search-map__city_wrapper');
+        let bodyServicesElement = document.querySelector('.city-services-location');
+        let downBaner = document.querySelector('.search-map__down-baner')
+
+        if (allCityList.length > 0) {
+            for (let i = 0; i < allCityList.length; i++) {
+                allCityList[i].addEventListener('click', function () {
+                    let currentCityId = allCityList[i].getAttribute('data-cityid');
+                    let currenServicesArrrayElement = document.querySelector(`.city-services-location__element[data-cityid="${currentCityId}"]`)
+                    let allServicesElements = currenServicesArrrayElement.querySelectorAll('.element-service-box__list-element')
+
+                    //скриваем города показываем сервисы
+                    bodyCityContainer.classList.add('hide-city-container')
+                    bodyServicesElement.classList.add('show-services-body')
+                    currenServicesArrrayElement.classList.add('active-services-element')
+                    downBaner.classList.add('down-baner-hide')
+
+                    inputIcon.classList.add('active-city-select')
+                    inputCity.readOnly = true;
+                    inputCity.value = allCityList[i].innerHTML;
+
+                    //перезагружаем карту и передаем все элементы с даными о каждом сервисе в карту
+                    initMap(allServicesElements)
+
+                    //сбрасываем карту
+                    let closeAllServices = document.querySelector('.active-city-select')
+                    closeAllServices.addEventListener('click', function () {
+                        inputIcon.classList.remove('active-city-select')
+                        bodyCityContainer.classList.remove('hide-city-container')
+                        bodyServicesElement.classList.remove('show-services-body')
+                        currenServicesArrrayElement.classList.remove('active-services-element')
+                        downBaner.classList.remove('down-baner-hide')
+                        inputCity.readOnly = false;
+                        initMap()
+                    })
+
+
+
+                    for (let x = 0; x < allServicesElements.length; x++) {
+                        //ценьрируем карту при клике по выбраному сервису
+                        allServicesElements[x].addEventListener('click', function () {
+                            let currentMapData = {
+                                zoomServ: 13,
+                                latServ: allServicesElements[x].getAttribute('data-latitude'),
+                                lngServ: allServicesElements[x].getAttribute('data-longitude'),
+                            }
+                            let statusElement = false;
+                            initMap(allServicesElements, currentMapData, statusElement)
+                        })
+                    }
+                })
+            }
+        }
+
+    }
+    selectCityMap();
+
+
+
+    //map
+    function initMap(allServicesElements, currentMapData, statusElement) {
+        if (document.getElementById('map1') != null) {
+            let mainZoom = 10;
+            let mainLat = 59.92759903686107;
+            let mainLng = 30.36016410248643;
+
+
+
+            if (statusElement == false) {
+                if (currentMapData != undefined) {
+                    mainZoom = +currentMapData.zoomServ;
+                    mainLat = +currentMapData.latServ;
+                    mainLng = +currentMapData.lngServ
+                }
+                else {
+                    mainZoom = 11;
+                    mainLat = 59.92759903686107;
+                    mainLng = 30.36016410248643;
+                }
+            }
+            else {
+                if (allServicesElements != undefined) {
+                    let latCenterx = +allServicesElements[0].getAttribute('data-latitude')
+                    let lngCenterx = +allServicesElements[0].getAttribute('data-longitude')
+
+                    mainZoom = 11;
+                    mainLat = +latCenterx;
+                    mainLng = +lngCenterx;
+                }
+            }
+
+
+            var map = new google.maps.Map(document.getElementById('map1'), {
+                center: { lat: mainLat, lng: mainLng },
+                zoom: mainZoom,
+                panControl: false,
+                zoomControl: true,
+                mapTypeControl: false,
+                scaleControl: false,
+                streetViewControl: false,
+                overviewMapControl: false,
+                rotateControl: false,
+                styles: [
+                    {
+                        "elementType": "geometry",
+                        "stylers": [
+                            {
+                                "color": "#1d2c4d"
+                            }
+                        ]
+                    },
+                    {
+                        "elementType": "labels.text.fill",
+                        "stylers": [
+                            {
+                                "color": "#8ec3b9"
+                            }
+                        ]
+                    },
+                    {
+                        "elementType": "labels.text.stroke",
+                        "stylers": [
+                            {
+                                "color": "#1a3646"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "administrative.country",
+                        "elementType": "geometry.stroke",
+                        "stylers": [
+                            {
+                                "color": "#4b6878"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "administrative.land_parcel",
+                        "elementType": "labels.text.fill",
+                        "stylers": [
+                            {
+                                "color": "#64779e"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "administrative.province",
+                        "elementType": "geometry.stroke",
+                        "stylers": [
+                            {
+                                "color": "#4b6878"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "landscape.man_made",
+                        "elementType": "geometry.stroke",
+                        "stylers": [
+                            {
+                                "color": "#334e87"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "landscape.natural",
+                        "elementType": "geometry",
+                        "stylers": [
+                            {
+                                "color": "#023e58"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "poi",
+                        "elementType": "geometry",
+                        "stylers": [
+                            {
+                                "color": "#283d6a"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "poi",
+                        "elementType": "labels.text.fill",
+                        "stylers": [
+                            {
+                                "color": "#6f9ba5"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "poi",
+                        "elementType": "labels.text.stroke",
+                        "stylers": [
+                            {
+                                "color": "#1d2c4d"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "poi.park",
+                        "elementType": "geometry.fill",
+                        "stylers": [
+                            {
+                                "color": "#023e58"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "poi.park",
+                        "elementType": "labels.text.fill",
+                        "stylers": [
+                            {
+                                "color": "#3C7680"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "road",
+                        "elementType": "geometry",
+                        "stylers": [
+                            {
+                                "color": "#304a7d"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "road",
+                        "elementType": "labels.text.fill",
+                        "stylers": [
+                            {
+                                "color": "#98a5be"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "road",
+                        "elementType": "labels.text.stroke",
+                        "stylers": [
+                            {
+                                "color": "#1d2c4d"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "road.highway",
+                        "elementType": "geometry",
+                        "stylers": [
+                            {
+                                "color": "#2c6675"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "road.highway",
+                        "elementType": "geometry.stroke",
+                        "stylers": [
+                            {
+                                "color": "#255763"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "road.highway",
+                        "elementType": "labels.text.fill",
+                        "stylers": [
+                            {
+                                "color": "#b0d5ce"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "road.highway",
+                        "elementType": "labels.text.stroke",
+                        "stylers": [
+                            {
+                                "color": "#023e58"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "transit",
+                        "elementType": "labels.text.fill",
+                        "stylers": [
+                            {
+                                "color": "#98a5be"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "transit",
+                        "elementType": "labels.text.stroke",
+                        "stylers": [
+                            {
+                                "color": "#1d2c4d"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "transit.line",
+                        "elementType": "geometry.fill",
+                        "stylers": [
+                            {
+                                "color": "#283d6a"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "transit.station",
+                        "elementType": "geometry",
+                        "stylers": [
+                            {
+                                "color": "#3a4762"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "water",
+                        "elementType": "geometry",
+                        "stylers": [
+                            {
+                                "color": "#0e1626"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "water",
+                        "elementType": "labels.text.fill",
+                        "stylers": [
+                            {
+                                "color": "#4e6d70"
+                            }
+                        ]
+                    }
+                ]
+            });
+
+            if (allServicesElements != undefined) {
+                for (let i = 0; i < allServicesElements.length; i++) {
+                    // получаем значения для каждого сервиса на карте
+                    let titleService = allServicesElements[i].innerHTML
+                    let latService = +allServicesElements[i].getAttribute('data-latitude')
+                    let lngService = +allServicesElements[i].getAttribute('data-longitude')
+
+
+                    // создаем макреры
+                    let marker = new google.maps.Marker({
+                        map: map,
+                        position: { lat: latService, lng: lngService },
+                        title: titleService,
+                        icon: {
+                            url: "img/_src/map.png",
+                            //scaledSize: new google.maps.Size(127, 127)
+                        }
+                    });
+                    let info = new google.maps.InfoWindow({
+                        content: '<h2 class="map_title">' + titleService + '</h2>'
+                    });
+
+
+                    marker.addListener('click', function () {
+                        info.open(map, marker);
+                    });
+
+
+                }
+
+            }
+        }
+
+        // map.setOptions({ styles: styles });
+    }
+    initMap()
+
+
     //animations start
     function animateController() {
         new Skroll({
@@ -1137,6 +1547,26 @@ window.addEventListener('load', function () {
                 animation: "fadeInUp"
             })
             .add(".delivery-rules-sec", {
+                delay: 300,
+                duration: 1000,
+                animation: "fadeInUp"
+            })
+            .add(".services-page-info-sec__element", {
+                delay: 300,
+                duration: 1000,
+                animation: "fadeInUp"
+            })
+            .add(".services-page-info-sec__baner", {
+                delay: 300,
+                duration: 1000,
+                animation: "fadeInUp"
+            })
+            .add(".services-map-sec", {
+                delay: 300,
+                duration: 1000,
+                animation: "fadeInUp"
+            })
+            .add(".services-faq-sec", {
                 delay: 300,
                 duration: 1000,
                 animation: "fadeInUp"
