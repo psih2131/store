@@ -75,6 +75,43 @@
     }
 }
 
+.btnFaqSend {
+    padding: 8px 24px;
+    background: #4C4A4A;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    line-height: 19px;
+    color: $textColor;
+    transition: all ease 0.3s;
+    cursor: pointer;
+
+    &:hover {
+        background: $brendColor;
+        color: $textColor;
+        transition: all ease 0.3s;
+    }
+}
+
+.btnCancel {
+    padding: 8px 24px;
+    background: none;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    line-height: 19px;
+    color: #B5B4B4;
+    transition: all ease 0.3s;
+    cursor: pointer;
+    border: 1px solid #B5B4B4;
+
+    &:hover {
+        background: #B5B4B4;
+        color: $textColor;
+        transition: all ease 0.3s;
+    }
+}
+
 @media only screen and (max-width: 750px) {
     .btnV1 {
         padding: 11px 30px;

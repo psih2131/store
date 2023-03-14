@@ -830,7 +830,8 @@
                                         <div class="body-element-delivery__body-element-row body-element-row">
                                             <div class="body-element-row__btn-box">
                                                 <p>Ознакомьтесь со стоимостью доставки в регионы</p>
-                                                <button class="btn-submit-form">Открыть</button>
+                                                <button class="btn-submit-form air-open-btn"
+                                                    data-popup-current="select-region-form">Открыть</button>
                                             </div>
                                         </div>
                                     </div>
@@ -960,7 +961,7 @@
                                 300-69-14 или нажав на кнопку</p>
                         </div>
                         <div class="delivery-baner-sec__btn-container">
-                            <button class="btn-submit-form">Открыть</button>
+                            <button class="btn-submit-form air-open-btn" data-popup-current="add-faq">Открыть</button>
                         </div>
                     </div>
                 </div>
@@ -1706,60 +1707,118 @@
             </div>
         </div>
 
-
-        <div class="popup-air add-review" data-air="add-faq">
-            <div class="autorization-popup__form">
-                <h3 class="autorization-popup__title">Оставить отзыв</h3>
-                <form class="autorization-popup__form-inp">
-                    <div class="autorization-popup__inp-box email-inp">
-                        <p class="autorization-popup__inp-title">Ваше имя</p>
-                        <div class="autorization-popup__inp-wrapper">
-                            <div class="autorization-popup__inp-ic">
-                                <img src="img/_src/user-form.svg" alt="">
-                            </div>
-                            <input type="text" placeholder="Введите свое имя">
+        <div class="popup-air add-faq" data-air="add-faq">
+            <div class="add-faq__wrapper">
+                <div class="add-faq__logo">
+                    <img src="img/_src/form-logo.svg" alt="">
+                </div>
+                <p class="add-faq__title">Задайте нам любой вопрос и мы ответим в течение часа.</p>
+                <div class="add-faq__form-wrapper">
+                    <form>
+                        <div class="add-faq__inp">
+                            <input type="text" placeholder="Ваше имя">
                         </div>
-                    </div>
-                    <div class="autorization-popup__reviews-rate rate-inp-conteiner">
-                        <p>Рейтинг *</p>
-                        <div class="rate-inp-conteiner__row">
-                            <div class="rate-inp-conteiner__star"></div>
-                            <div class="rate-inp-conteiner__star"></div>
-                            <div class="rate-inp-conteiner__star"></div>
-                            <div class="rate-inp-conteiner__star"></div>
-                            <div class="rate-inp-conteiner__star"></div>
+                        <div class="add-faq__inp">
+                            <input type="text" placeholder="Ваш телефон">
                         </div>
-
-                        <!-- скритый инпут в который передается оценка от 1 до 5, по дефолту инпут пустой -->
-                        <input type="hidden" class="rate-inp-conteiner-value">
-                    </div>
-                    <div class="autorization-popup__inp-box email-inp">
-                        <p class="autorization-popup__inp-title">E-mail</p>
-                        <div class="autorization-popup__inp-wrapper">
-                            <div class="autorization-popup__inp-ic">
-                                <img src="img/_src/email.svg" alt="">
-                            </div>
-                            <input type="text" placeholder="Введите свой E-mail">
+                        <div class="add-faq__inp">
+                            <input type="text" placeholder="Ваш Email">
                         </div>
-                    </div>
-                    <div class="autorization-popup__inp-box email-inp">
-                        <p class="autorization-popup__inp-title">Отзыв</p>
-                        <div class="autorization-popup__inp-wrapper">
-                            <div class="autorization-popup__inp-ic">
-                                <img src="img/_src/mes-form.svg" alt="">
-                            </div>
-                            <input type="text" placeholder="Текст вашего отзыва">
+                        <div class="add-faq__inp">
+                            <textarea placeholder="Ваш вопрос"></textarea>
                         </div>
-                    </div>
-                    <div class="autorization-popup__btn-wrapper">
-                        <input type="submit" value="Отправить" class="btnSend">
-                    </div>
-                </form>
-                <p class="autorization-popup__politic-text">Нажимая кнопку Отправить Вы даете согласие на
-                    обработку
-                    своих <a href="">персональных данных</a></p>
+                        <p class="autorization-popup__politic-text">Нажимая кнопку Отправить Вы даете согласие на
+                            обработку
+                            своих <a href="">персональных данных</a></p>
+                        <div class="add-faq__form-row">
+                            <input class="btnFaqSend" type="submit" value="Отправить">
+                            <button class="btnCancel">Отмена</button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
+
+        <div class="popup-air select-region-form" data-air="select-region-form">
+            <div class="select-region-form__wrapper">
+                <p class="select-region-form__title">Найдите ваш регион</p>
+                <div class="region-table">
+                    <div class="region-table__header">
+                        <div class="region-table__row">
+                            <div class="region-table__element">Регион</div>
+                            <div class="region-table__element">Cтоимость</div>
+                        </div>
+                    </div>
+                    <div class="region-table__body">
+                        <div class="region-table__row">
+                            <div class="region-table__element">Алтайский край</div>
+                            <div class="region-table__element">1200 ₽</div>
+                        </div>
+                        <div class="region-table__row">
+                            <div class="region-table__element">Алтайский край</div>
+                            <div class="region-table__element">1200 ₽</div>
+                        </div>
+                        <div class="region-table__row">
+                            <div class="region-table__element">Алтайский край</div>
+                            <div class="region-table__element">1200 ₽</div>
+                        </div>
+                        <div class="region-table__row">
+                            <div class="region-table__element">Алтайский край</div>
+                            <div class="region-table__element">1200 ₽</div>
+                        </div>
+                        <div class="region-table__row">
+                            <div class="region-table__element">Алтайский край</div>
+                            <div class="region-table__element">1200 ₽</div>
+                        </div>
+                        <div class="region-table__row">
+                            <div class="region-table__element">Алтайский край</div>
+                            <div class="region-table__element">1200 ₽</div>
+                        </div>
+                        <div class="region-table__row">
+                            <div class="region-table__element">Алтайский край</div>
+                            <div class="region-table__element">1200 ₽</div>
+                        </div>
+                        <div class="region-table__row">
+                            <div class="region-table__element">Алтайский край</div>
+                            <div class="region-table__element">1200 ₽</div>
+                        </div>
+                        <div class="region-table__row">
+                            <div class="region-table__element">Алтайский край</div>
+                            <div class="region-table__element">1200 ₽</div>
+                        </div>
+                        <div class="region-table__row">
+                            <div class="region-table__element">Алтайский край</div>
+                            <div class="region-table__element">1200 ₽</div>
+                        </div>
+                        <div class="region-table__row">
+                            <div class="region-table__element">Алтайский край</div>
+                            <div class="region-table__element">1200 ₽</div>
+                        </div>
+                        <div class="region-table__row">
+                            <div class="region-table__element">Алтайский край</div>
+                            <div class="region-table__element">1200 ₽</div>
+                        </div>
+                        <div class="region-table__row">
+                            <div class="region-table__element">Алтайский край</div>
+                            <div class="region-table__element">1200 ₽</div>
+                        </div>
+                        <div class="region-table__row">
+                            <div class="region-table__element">Алтайский край</div>
+                            <div class="region-table__element">1200 ₽</div>
+                        </div>
+                        <div class="region-table__row">
+                            <div class="region-table__element">Алтайский край</div>
+                            <div class="region-table__element">1200 ₽</div>
+                        </div>
+                        <div class="region-table__row">
+                            <div class="region-table__element">Алтайский край</div>
+                            <div class="region-table__element">1200 ₽</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
     <script src="js/scripts.min.js"></script>
 </body>
