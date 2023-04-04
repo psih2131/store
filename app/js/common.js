@@ -335,6 +335,190 @@ $(function () {
 
 
 
+    //recipe card slider products
+    $('.recipe-tools__slider').slick({
+        infinite: true,
+        speed: 1000,
+        adaptiveHeight: true,
+        slidesToScroll: 1,
+        dots: true,
+        slidesToShow: 4,
+
+        prevArrow: '<div class="ar_slierV3 prev-ar_slide"></div></div>',
+        nextArrow: '<div class="ar_slierV3 next-ar_slide"></div></div>',
+        responsive: [
+            {
+                breakpoint: 1450,
+                settings: {
+                    slidesToShow: 3,
+                }
+            },
+            {
+                breakpoint: 1250,
+                settings: {
+                    slidesToShow: 2,
+                }
+            },
+            {
+                breakpoint: 750,
+                settings: {
+                    slidesToShow: 1,
+                }
+            },
+
+
+        ]
+    });
+
+
+    //recipe card reviews slider
+    $('.recipe-reviews__slider').slick({
+        infinite: true,
+        speed: 1000,
+        adaptiveHeight: true,
+        slidesToScroll: 1,
+        dots: true,
+        slidesToShow: 3,
+        centerMode: true,
+        centerPadding: '0',
+        prevArrow: '<div class="ar_slierV3 prev-ar_slide"></div></div>',
+        nextArrow: '<div class="ar_slierV3 next-ar_slide"></div></div>',
+        responsive: [
+            {
+                breakpoint: 1400,
+                settings: {
+                    centerPadding: '0px',
+                }
+            },
+            {
+                breakpoint: 1000,
+                settings: {
+                    centerPadding: '0px',
+                    slidesToShow: 2,
+                }
+            },
+            {
+                breakpoint: 750,
+                settings: {
+                    centerPadding: '0px',
+                    slidesToShow: 1,
+                }
+            },
+        ]
+    });
+
+    //recipe card post mobil slider
+    if (window.matchMedia('(max-width: 650px)').matches) {
+        $('.recipe-other-sec__slider').slick({
+            infinite: true,
+            speed: 1000,
+            adaptiveHeight: true,
+            slidesToScroll: 1,
+            dots: true,
+            slidesToShow: 1,
+            arrows: false
+        });
+    }
+
+
+    //recipe slider 2 complete
+    $('.recipe-slider-sec__slider').slick({
+        infinite: true,
+        speed: 1000,
+        adaptiveHeight: true,
+        slidesToScroll: 1,
+        dots: true,
+        slidesToShow: 2,
+
+        prevArrow: '<div class="ar_slierV3 prev-ar_slide"></div></div>',
+        nextArrow: '<div class="ar_slierV3 next-ar_slide"></div></div>',
+        responsive: [
+            {
+                breakpoint: 1250,
+                settings: {
+
+                    slidesToShow: 1,
+                }
+            },
+            {
+                breakpoint: 1000,
+                settings: {
+
+                    slidesToShow: 1,
+                }
+            },
+            {
+                breakpoint: 750,
+                settings: {
+
+                    slidesToShow: 1,
+                }
+            },
+            {
+                breakpoint: 650,
+                settings: {
+
+                    slidesToShow: 1,
+                    dots: false,
+                }
+            },
+        ]
+    });
+
+
+    //recipe slider category nav
+    $('.recipe-nav-sec__slider').slick({
+        infinite: true,
+        speed: 1000,
+        adaptiveHeight: true,
+        slidesToScroll: 1,
+        dots: true,
+        slidesToShow: 9,
+        prevArrow: '<div class="ar_slierV3 prev-ar_slide"></div></div>',
+        nextArrow: '<div class="ar_slierV3 next-ar_slide"></div></div>',
+        responsive: [
+            {
+                breakpoint: 1250,
+                settings: {
+                    centerPadding: '0px',
+                    slidesToShow: 6,
+                }
+            },
+            {
+                breakpoint: 1000,
+                settings: {
+                    centerPadding: '0px',
+                    slidesToShow: 4,
+                }
+            },
+            {
+                breakpoint: 750,
+                settings: {
+                    centerPadding: '0px',
+                    slidesToShow: 3,
+                }
+            },
+            {
+                breakpoint: 650,
+                settings: {
+
+                    slidesToShow: 3,
+                    dots: false,
+                }
+            },
+            {
+                breakpoint: 550,
+                settings: {
+                    dots: false,
+                    slidesToShow: 3,
+                }
+            },
+        ]
+    });
+
+
+
+
     //lang open close
     $('.lang-switch__btn').on('click', function () {
         $('.lang-switch__list').slideToggle(300, function () {
@@ -375,6 +559,7 @@ $(function () {
 
 
 window.addEventListener('load', function () {
+
     //popups start
     // <div class="popup-air galery-conteiner" data-air="test">
     // 		<div class="galery-popup">
@@ -928,6 +1113,27 @@ window.addEventListener('load', function () {
     }
     tabRegion()
 
+    // recipe card Counter
+    function recipeCounter() {
+        let minusBtn = document.querySelector('.portion-counter__remove');
+        let plusBtn = document.querySelector('.portion-counter__add');
+        let span = document.querySelector('.portion-counter__value span');
+        if (minusBtn != null) {
+            minusBtn.addEventListener('click', function () {
+                let currentValue = parseInt(span.textContent);
+                if (currentValue > 1) {
+                    span.textContent = (currentValue - 1).toString();
+                }
+            });
+
+            plusBtn.addEventListener('click', function () {
+                let currentValue = parseInt(span.textContent);
+                span.textContent = (currentValue + 1).toString();
+            });
+        }
+
+    }
+    recipeCounter()
 
 
 
@@ -1567,6 +1773,42 @@ window.addEventListener('load', function () {
                 animation: "fadeInUp"
             })
             .add(".services-faq-sec", {
+                delay: 300,
+                duration: 1000,
+                animation: "fadeInUp"
+            })
+            .add(".recipe-tools", {
+                delay: 300,
+                duration: 1000,
+                animation: "fadeInUp"
+            })
+            .add(".recipe-info__left", {
+                delay: 300,
+                duration: 1000,
+                animation: "fadeInUp"
+            })
+            .add(".recipe-info__right", {
+                delay: 300,
+                duration: 1000,
+                animation: "fadeInUp"
+            })
+
+            .add(".recipe-other-sec__element", {
+                delay: 300,
+                duration: 1000,
+                animation: "fadeInUp"
+            })
+            .add(".recipe-other-sec__btn-row", {
+                delay: 300,
+                duration: 1000,
+                animation: "fadeInUp"
+            })
+            .add(".recipe-slider-sec", {
+                delay: 300,
+                duration: 1000,
+                animation: "fadeInUp"
+            })
+            .add(".video-sec", {
                 delay: 300,
                 duration: 1000,
                 animation: "fadeInUp"
