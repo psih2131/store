@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="17.424" height="18.39" viewBox="0 0 17.424 18.39">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #fff;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 2px;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <g id="Bag" transform="translate(-2.302 -1.278)">
+    <g id="Group_366" data-name="Group 366" transform="translate(3.302 2.278)">
+      <g id="Iconly_Light_Bag" data-name="Iconly/Light/Bag" transform="translate(0 0)">
+        <g id="Bag-2" data-name="Bag">
+          <path id="Path_33955" class="cls-1" d="M12.067,17.837H4.949c-2.614,0-4.621-.945-4.05-4.745l.663-5.151c.351-1.9,1.561-2.623,2.623-2.623h8.678c1.078,0,2.217.78,2.623,2.623l.663,5.15C16.633,16.464,14.682,17.837,12.067,17.837Z" transform="translate(-0.802 -1.447)"/>
+          <path id="Path_33956" class="cls-1" d="M12.875,4.462a3.692,3.692,0,0,0-7.383,0" transform="translate(-1.493 -0.778)"/>
+          <path id="Line_192" class="cls-1" d="M12.789,9.6h-.038" transform="translate(-2.562 -2.078)"/>
+          <path id="Line_193" class="cls-1" d="M6.959,9.6H6.92" transform="translate(-1.703 -2.078)"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

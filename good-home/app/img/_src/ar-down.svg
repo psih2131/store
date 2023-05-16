@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="11.817" height="25.076" viewBox="0 0 11.817 25.076">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: none;
+        stroke: #fff;
+        stroke-linecap: round;
+      }
+
+      .cls-1 {
+        stroke-linejoin: round;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <g id="Arrow" transform="translate(-4.293 33.076) rotate(-90)">
+    <path id="Stroke-1" class="cls-1" d="M10.4,0,5.2,5.2,0,0" transform="translate(13.701 5) rotate(90)"/>
+    <line id="Line_144" data-name="Line 144" class="cls-2" x2="23.587" transform="translate(8.989 10.201)"/>
+  </g>
+</svg>

@@ -1,0 +1,115 @@
+.pay-sec {
+    padding-top: 128px;
+    padding-bottom: 90px;
+}
+
+.pay-sec__current-price {
+    text-align: center;
+    font-size: 24px;
+    line-height: 2.25;
+    letter-spacing: 0.48px;
+    color: $yellow;
+    font-weight: 600;
+    margin-bottom: 46px;
+
+    span {
+        font-size: 16px;
+    }
+}
+
+.pay-sec__user-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 35px;
+}
+
+.pay-sec__name {
+    font-size: 22px;
+    color: $white;
+    font-weight: 600;
+}
+
+.pay-sec__edit-link {
+    font-size: 14px;
+    color: #4988ef;
+    font-weight: 500;
+}
+
+.projects-pay-box__docks {
+    display: flex;
+    align-items: center;
+
+    img {
+        width: 13px;
+        display: block;
+    }
+
+    p {
+        color: $white;
+        font-size: 12px;
+        margin-left: 10px;
+        font-weight: 500;
+        text-transform: uppercase;
+    }
+}
+
+.pay-sec__pay-info {
+    padding-top: 23px;
+
+    .input-box {
+        .input-box__row {
+            input {
+                border-radius: 0;
+            }
+        }
+    }
+}
+
+.cvc {
+    input {
+        text-align: center;
+    }
+}
+
+.visa-date {
+    .input-box__row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        input {
+            width: calc(50% - 20px);
+            text-align: center;
+        }
+
+        span {
+            color: $white;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    }
+}
+
+.visa-number {
+    .input-box__row {
+        position: relative;
+
+        input {
+            z-index: 1;
+            padding-left: 66px;
+        }
+    }
+
+    .visa-number__icon-type {
+        position: absolute;
+        left: 18px;
+        width: 25px;
+        z-index: 5;
+
+        img {
+            width: 100%;
+            display: block;
+        }
+    }
+}

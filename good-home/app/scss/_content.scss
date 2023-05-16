@@ -1,0 +1,238 @@
+.btn-nav {
+    border-radius: 100px;
+    box-shadow: 3px 5px 6px 0 rgba(0, 0, 0, 0.16);
+    border: solid 1px rgba(255, 255, 255, 0.08);
+    background-color: #21262f;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+
+.articles-sec {
+    .btn-nav_search {
+        right: 0;
+        z-index: 10;
+    }
+
+    .btn-nav_back {
+        left: 0;
+        z-index: 10;
+    }
+}
+
+.articles-sec__content {
+    margin-top: 40px;
+
+}
+
+.articles-sec__claster {
+    padding-left: 32px;
+}
+
+.articles-sec__title {
+    line-height: 1.71;
+    letter-spacing: 0.48px;
+    font-size: 24px;
+    color: $white;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.articles-sec__claster {
+    padding-bottom: 49px;
+}
+
+.article-element {
+    min-width: 250px;
+    display: block;
+    padding-right: 25px;
+}
+
+.article-element__image {
+    width: 100%;
+    height: 157px;
+
+    img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+    }
+}
+
+.article-element__category {
+    margin-top: 10px;
+    text-transform: uppercase;
+    color: #808da2;
+    font-size: 12px;
+    letter-spacing: 0.96px;
+}
+
+.article-element__title {
+    margin-top: 10px;
+    line-height: 1.5;
+    font-size: 16px;
+    color: $white;
+    font-weight: 600;
+}
+
+.articles-sec__line {
+    overflow-x: auto;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+}
+
+.articles-sec__row {
+    display: flex;
+    padding-right: 20px;
+
+}
+
+.border-x {
+    width: 100%;
+    height: 1px;
+    background: #5b6472;
+}
+
+.trends {
+    margin-top: 27px;
+}
+
+.articles-sec__coll {
+    min-width: 357px;
+    width: 357px;
+    padding-right: 37px;
+}
+
+.articles-elementV2 {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 25px;
+}
+
+.articles-elementV2__image {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 121px;
+    height: 127px;
+    border: solid 1px rgba(255, 255, 255, 0.42);
+}
+
+.articles-elementV2__img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: relative;
+    -o-object-fit: cover;
+    z-index: 1;
+}
+
+.articles-elementV2__text {
+    width: calc(100% - 121px);
+    padding-left: 20px;
+
+    .article-element__category {
+        margin-top: 3px;
+    }
+}
+
+.articles-elementV2__play {
+    box-shadow: 3px 5px 6px 0 rgba(0, 0, 0, 0.16);
+    border: solid 1px rgba(255, 255, 255, 0.16);
+    background-color: #21262f;
+    width: 44px;
+    height: 44px;
+    position: absolute;
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        width: 14px;
+        display: block;
+    }
+}
+
+.form-search {
+    position: absolute;
+    width: 250px;
+    right: 0;
+
+    transition: all ease 0.5s;
+    border: solid 1px rgba(0, 0, 0, 0);
+    background-color: none;
+    display: flex;
+    align-items: center;
+    border-radius: 200px;
+    width: 0;
+    overflow: hidden;
+
+    form {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        justify-content: space-between;
+    }
+}
+
+.form-search_activ {
+    width: 250px;
+    border: solid 1px rgba(255, 255, 255, .08);
+    background-color: #21262f;
+
+}
+
+.form-search__btn {
+    width: 44px;
+    height: 44px;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    input {
+        font-size: 0;
+        border: none;
+        background: none;
+        background-image: url('../img/_src/ic-search.svg');
+        background-size: cover;
+        background-position: center;
+        width: 25px;
+        height: 25px;
+    }
+}
+
+.form-search__inp {
+    width: calc(100% - 88px);
+
+    input {
+        background: none;
+        border: none;
+        font-size: 18px;
+        color: #fff;
+    }
+}
+
+.form-search__close {
+    width: 44px;
+    height: 44px;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+        width: 15px;
+        display: block;
+    }
+}

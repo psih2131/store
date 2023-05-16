@@ -1,0 +1,190 @@
+.small-house-sec {
+    background-size: cover;
+    background-position: center;
+
+    .main-wrapper {
+        background-image: radial-gradient(circle at 54% 50%, rgba(43, 51, 62, 0), #19202b 100%);
+        width: 100%;
+        height: 100%;
+        padding-bottom: 17px;
+    }
+
+    .back-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .button-close {
+        position: relative;
+        left: auto;
+    }
+}
+
+.small-house-sec__subtitle {
+    margin-top: 28px;
+    text-shadow: 0 2px 0 rgba(0, 0, 0, 0.16);
+    font-size: 17px;
+    color: $white;
+}
+
+.house-list {
+    padding-bottom: 150px;
+    padding-top: 30px;
+}
+
+.house-list__element {
+    margin-bottom: 40px;
+}
+
+.house-box {
+    width: 100%;
+    box-shadow: 3px 5px 6px 0 rgba(0, 0, 0, 0.16);
+    border: solid 1px rgba(255, 255, 255, 0.08);
+    background-color: #21262f;
+    position: relative;
+}
+
+.house-box__img-conteiner {
+    width: calc(100% + 2px);
+    margin-left: -1px;
+    margin-top: -1px;
+    height: 156px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.house-box__left-img {
+    width: calc(60% - 2px);
+    height: 100%;
+
+    .house-box__image-wrapper {
+        height: 100%;
+    }
+}
+
+.house-box__right-img {
+    width: calc(40% - 2px);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 100%;
+
+    .img-hh {
+        height: calc(50% - 2px);
+        width: calc(50% - 2px);
+
+        &:nth-child(1) {
+            width: 100%;
+            margin-bottom: 4px;
+        }
+    }
+}
+
+.img-hh {
+    position: relative;
+    border: solid 1px rgba(255, 255, 255, 0.1);
+
+    img {
+        mix-blend-mode: color-dodge;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    &:before {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        content: "";
+        z-index: 5;
+        box-shadow: inset 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+    }
+}
+
+.house-box__info {
+    padding: 15px 0 12px 12px;
+}
+
+.house-box__row-title {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 12px;
+
+    .price-row__price {
+        font-size: 24px;
+        font-weight: 500;
+
+        span {
+            font-size: 16px;
+        }
+    }
+}
+
+.house-box__row-dows {
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .slider-types__btn {
+        padding: 7.5px 11px 7px 10px;
+
+        &:before {
+            content: "";
+            position: absolute;
+            /* установка абсолютного положения для псевдоэлемента */
+            top: 0;
+            left: -15px;
+            /* установка левого положения на 20px от div */
+            width: 0;
+            height: 0;
+            border-top: 0px solid transparent;
+            /* установка верхней границы треугольника */
+            border-bottom: 33px solid transparent;
+            /* установка нижней границы треугольника */
+            border-right: 15px solid rgba(43, 51, 62, 0.67);
+
+            /* установка правой границы треугольника и цвета фона */
+        }
+    }
+
+}
+
+.add-fav {
+    position: absolute;
+    width: 44px;
+    height: 44px;
+    border-radius: 21px;
+    box-shadow: 3px 5px 6px 0 rgba(0, 0, 0, 0.16);
+    border: solid 1px rgba(255, 255, 255, 0.08);
+    background-color: #21262f;
+    display: flex;
+    justify-content: center;
+    z-index: 10;
+    right: 12px;
+    top: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.add-fav__active {
+    .add-fav__img {
+        background-image: url('../img/_src/ic-star-active.svg');
+    }
+}
+
+.add-fav__img {
+    background-image: url('../img/_src/-c-star-def.svg');
+    background-size: cover;
+    background-position: center;
+    width: 20px;
+    height: 19.1px;
+}

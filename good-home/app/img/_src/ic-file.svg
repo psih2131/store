@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="12.618" height="12.612" viewBox="0 0 12.618 12.612">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #ddb40a;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+  </defs>
+  <g id="File" transform="translate(-170.24 -489.25)">
+    <path id="Path_898" data-name="Path 898" class="cls-1" d="M6.4,3H4.663A1.673,1.673,0,0,0,2.99,4.667v7.779a1.669,1.669,0,0,0,1.673,1.667h7.772a1.673,1.673,0,0,0,1.673-1.667V6.889a1.669,1.669,0,0,0-1.673-1.667H8.9a.562.562,0,0,1-.5-.309L7.9,3.92A1.679,1.679,0,0,0,6.4,3Z" transform="translate(168 487)"/>
+    <path id="Path_899" data-name="Path 899" class="cls-1" d="M15.551,5.567V5a1.117,1.117,0,0,0-1.117-1.1H11.1" transform="translate(164.897 486.656)"/>
+    <path id="Path_900" data-name="Path 900" class="cls-1" d="M7.49,16.5H9.719" transform="translate(166.278 481.834)"/>
+  </g>
+</svg>

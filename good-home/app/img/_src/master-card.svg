@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="25.304" height="17.023" viewBox="0 0 25.304 17.023">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #eaa340;
+      }
+
+      .cls-2 {
+        fill: #d72e2a;
+      }
+    </style>
+  </defs>
+  <g id="master-card" transform="translate(-1.999 -5.271)">
+    <g id="Group_372" data-name="Group 372" transform="translate(1.999 5.271)">
+      <path id="Path_863" data-name="Path 863" class="cls-1" d="M17.056,22.294a8.51,8.51,0,1,1,8.51-8.51h0a8.521,8.521,0,0,1-8.51,8.51Z" transform="translate(-0.263 -5.27)"/>
+      <path id="Path_864" data-name="Path 864" class="cls-2" d="M10.511,22.295a8.512,8.512,0,1,1,8.512-8.511,8.512,8.512,0,0,1-8.512,8.511Z" transform="translate(-1.999 -5.271)"/>
+    </g>
+  </g>
+</svg>

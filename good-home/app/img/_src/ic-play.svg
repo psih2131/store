@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="14" height="17" viewBox="0 0 14 17">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <path id="Play" class="cls-1" d="M7.645,1.408a1,1,0,0,1,1.71,0l6.723,11.073A1,1,0,0,1,15.223,14H1.777a1,1,0,0,1-.855-1.519Z" transform="translate(14) rotate(90)"/>
+</svg>

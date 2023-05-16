@@ -1,0 +1,43 @@
+@mixin btnStyle {
+    background: $yellow;
+    border-radius: 20px;
+    font-size: 18px;
+    color: $white;
+    font-weight: 700;
+    border: none;
+    display: inline-block;
+}
+
+@mixin btnStyleV2 {
+    background: none;
+    border-radius: 20px;
+    font-size: 16px;
+    color: #cad3e3;
+    font-weight: 500;
+    border: none;
+    display: inline-block;
+    border: solid 1px rgba(255, 255, 255, 0.1);
+}
+
+@mixin btnStyleV3 {
+    background: $grey;
+    border-radius: 20px;
+    font-size: 16px;
+    color: #cad3e3;
+    font-weight: 700;
+    border: none;
+    display: inline-block;
+    border: solid 1px rgba(255, 255, 255, 0.1);
+}
+
+@mixin btnStyleV4 {
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+    border: solid 1px rgba(255, 255, 255, 0.12);
+    background-color: #1c222c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: $white;
+    font-weight: 500;
+}

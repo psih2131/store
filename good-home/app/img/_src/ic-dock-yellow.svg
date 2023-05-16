@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="14.49" height="15.976" viewBox="0 0 14.49 15.976">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #ddb40a;
+      }
+    </style>
+  </defs>
+  <g id="document-text" transform="translate(-2.25 -1.25)">
+    <g id="Group_371" data-name="Group 371" transform="translate(2.25 1.25)">
+      <path id="Path_859" data-name="Path 859" class="cls-1" d="M12.467,17.226H6.523A3.892,3.892,0,0,1,2.25,12.953V5.523A3.892,3.892,0,0,1,6.523,1.25h5.945A3.892,3.892,0,0,1,16.74,5.523v7.431A3.892,3.892,0,0,1,12.467,17.226ZM6.523,2.365C4.4,2.365,3.365,3.4,3.365,5.523v7.431c0,2.125,1.033,3.158,3.158,3.158h5.945c2.125,0,3.158-1.033,3.158-3.158V5.523c0-2.125-1.033-3.158-3.158-3.158Z" transform="translate(-2.25 -1.25)"/>
+      <path id="Path_860" data-name="Path 860" class="cls-1" d="M17.28,7.837H15.793A2.042,2.042,0,0,1,13.75,5.793V4.307a.557.557,0,0,1,1.115,0V5.793a.929.929,0,0,0,.929.929H17.28a.557.557,0,1,1,0,1.115Z" transform="translate(-5.205 -1.892)"/>
+      <path id="Path_861" data-name="Path 861" class="cls-1" d="M10.78,13.365H7.807a.557.557,0,1,1,0-1.115H10.78a.557.557,0,1,1,0,1.115Z" transform="translate(-3.535 -4.076)"/>
+      <path id="Path_862" data-name="Path 862" class="cls-1" d="M13.752,17.365H7.807a.557.557,0,0,1,0-1.115h5.945a.557.557,0,1,1,0,1.115Z" transform="translate(-3.535 -5.104)"/>
+    </g>
+  </g>
+</svg>

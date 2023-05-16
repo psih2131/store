@@ -1,4 +1,17 @@
 
+window.addEventListener('load', function () {
+    //preloader script
+    let preloaderConteiner = document.querySelector('.preloader-conteiner');
+    let app = document.querySelector('.app')
+    setTimeout(() => {
+        preloaderConteiner.classList.add('hidePreloader')
+        app.style.display = "block"
+
+    }, 200)
+});
+
+
+
 $(function () {
     $(document).scroll(function (e) {
         $(window).scrollTop() > 150 ? $('.top-btn').addClass('__body_up') : $('.top-btn').removeClass('__body_up');
@@ -558,7 +571,11 @@ $(function () {
 });
 
 
+
 window.addEventListener('load', function () {
+
+
+
 
     //popups start
     // <div class="popup-air galery-conteiner" data-air="test">
@@ -1813,6 +1830,7 @@ window.addEventListener('load', function () {
                 duration: 1000,
                 animation: "fadeInUp"
             })
+
 
 
             .init()

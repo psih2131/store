@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16.208" height="11.613" viewBox="0 0 16.208 11.613">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #ddb40a;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 2px;
+      }
+    </style>
+  </defs>
+  <g id="check" transform="translate(-2.586 -4.586)">
+    <g id="Group_357" data-name="Group 357" transform="translate(4 6)">
+      <path id="Path_846" data-name="Path 846" class="cls-1" d="M17.38,6l-9.2,9.2L4,11.018" transform="translate(-4 -6)"/>
+    </g>
+  </g>
+</svg>

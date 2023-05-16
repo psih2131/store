@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="23.838" height="22.71" viewBox="0 0 23.838 22.71">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #5b6472;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.7px;
+      }
+    </style>
+  </defs>
+  <g id="star" transform="translate(-1.043 -1.604)">
+    <g id="Group_373" data-name="Group 373" transform="translate(2 2.459)">
+      <path id="Path_865" data-name="Path 865" class="cls-1" d="M24.01,10.868a1.031,1.031,0,0,0-.88-1.211l-6.273-.88L14,3.054a.859.859,0,0,0-.44-.44,1.114,1.114,0,0,0-1.541.44L9.263,8.777l-6.273.88a.665.665,0,0,0-.66.33,1.064,1.064,0,0,0,0,1.541l4.512,4.4L5.742,22.2a1.4,1.4,0,0,0,.11.66,1.114,1.114,0,0,0,1.541.44l5.613-2.971L18.618,23.3a.825.825,0,0,0,.55.11h.22a1.141,1.141,0,0,0,.88-1.321l-1.1-6.273,4.512-4.4a.605.605,0,0,0,.33-.55Z" transform="translate(-2 -2.459)"/>
+    </g>
+  </g>
+</svg>
